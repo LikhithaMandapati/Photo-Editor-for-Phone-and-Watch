@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise7_Mandapati_Likhitha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="P4Q-mf-ooa">
+                                <rect key="frame" x="71.666666666666686" y="227.33333333333334" width="250" height="397.33333333333326"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cJU-qS-jaG">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="32"/>
+                                        <segments>
+                                            <segment title="Original"/>
+                                            <segment title="Chrome"/>
+                                            <segment title="Fade"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="applyFilter:" destination="BYZ-38-t0r" eventType="valueChanged" id="S0A-yt-OTt"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KqV-Lg-vv2">
+                                        <rect key="frame" x="0.0" y="71.999999999999972" width="250" height="250.00000000000003"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="IOW-zS-OM8"/>
+                                            <constraint firstAttribute="width" constant="250" id="hVc-j7-WOW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="AvQ-1H-p2C">
+                                        <rect key="frame" x="0.0" y="363" width="250" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJy-zK-5ME">
+                                                <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                                <connections>
+                                                    <action selector="cameraImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mi5-Bq-z7H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53K-2C-1A5">
+                                                <rect key="frame" x="76.666666666666671" y="0.0" width="50.666666666666671" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                                <connections>
+                                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcz-7D-9NF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPE-eJ-tlO">
+                                                <rect key="frame" x="148.33333333333331" y="0.0" width="45.666666666666657" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="applewatch" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yAj-3Z-2pl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHS-aZ-k6T">
+                                                <rect key="frame" x="215" y="0.0" width="35" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
+                                                <connections>
+                                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgc-ui-92Z"/>
+                                                    <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgA-hE-5Ii"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P4Q-mf-ooa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PlP-UL-Gax"/>
+                            <constraint firstItem="P4Q-mf-ooa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vpO-h2-fqU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="kJy-zK-5ME" id="Q9R-EY-JB9"/>
+                        <outlet property="imageView" destination="KqV-Lg-vv2" id="MXE-XR-SIN"/>
+                        <outlet property="saveButton" destination="LHS-aZ-k6T" id="xrr-gk-b6U"/>
+                        <outlet property="selectButton" destination="53K-2C-1A5" id="ZnA-4A-DXf"/>
+                        <outlet property="watchButton" destination="SPE-eJ-tlO" id="Fjx-nB-DVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applewatch" catalog="system" width="110" height="128"/>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
